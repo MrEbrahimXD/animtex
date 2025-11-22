@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimTex - Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            accent: '#1c1917', // stone-900 (Dark Black/Brown)
+                            primary: '#d4af37', // Gold
+                            secondary: '#fcd34d', // Amber-300 (Light Gold)
+                            mist: '#f5f5f4', // stone-100 (Beige/Mist)
+                            surface: '#ffffff',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Outfit"', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'card': '0.75rem', // rounded-xl
+                        'button': '0.5rem', // rounded-lg
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+            color: #44403c; /* stone-700 */
+        }
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        /* Soften the shadows */
+        .shadow-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .shadow-soft {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(to right, #d4af37, #fcd34d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="px-4 py-10 sm:px-6 md:px-8 lg:px-0">
+            <main class="mx-auto w-full max-w-[800px] space-y-12 pb-20">
+                
+                <!-- Hero Section -->
+                <section class="relative overflow-hidden rounded-card bg-[#1c1917] px-6 py-16 text-center shadow-card sm:px-12 sm:py-24">
+                    <div class="absolute inset-0 z-0">
+                        <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[#d4af37]/20 blur-3xl"></div>
+                        <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#fcd34d]/10 blur-3xl"></div>
+                        <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/1c1917/1c1917.png')] opacity-50 mix-blend-overlay"></div>
+                    </div>
+                    
+                    <div class="relative z-10 mx-auto max-w-4xl space-y-8">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#d4af37] backdrop-blur-sm ring-1 ring-[#d4af37]/30">
+                            <span class="flex h-2 w-2 rounded-full bg-[#d4af37]"></span>
+                            <span>v1.0.5 Available Now</span>
+                        </div>
+                        
+                        <h1 class="font-display text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl">
+                            The First <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#fcd34d]">Transition Engine</span><br>for Blender.
+                        </h1>
+                        
+                        <p class="mx-auto max-w-2xl text-lg text-stone-300 sm:text-xl leading-relaxed">
+                            Revolutionize your workflow. AnimTex creates complex, driver-driven transitions between any two materials or textures in seconds.
+                        </p>
+
+                        <div class="pt-8 text-xs font-medium text-stone-500 uppercase tracking-widest">
+                            Works with Cycles & Eevee Next
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Discount Section -->
+                <section class="rounded-card border border-[#d4af37]/20 bg-gradient-to-br from-[#f5f5f4] to-white p-6 shadow-soft">
+                    <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="flex h-2 w-2 rounded-full bg-[#d4af37]"></span>
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Early Access</p>
+                            </div>
+                            <h2 class="font-display text-xl font-bold text-[#1c1917] sm:text-2xl"><span class="text-[#d4af37]">35% OFF</span> Beta Launch Special.</h2>
+                            <p class="text-sm text-stone-600">Discount automatically applied. No code required.</p>
+                        </div>
+                        <div class="flex w-full sm:w-auto flex-col gap-3">
+                            <div class="flex items-center justify-center rounded-button bg-[#1c1917] px-6 py-3 shadow-sm">
+                                <span class="font-mono text-lg font-bold text-white">BETA STATUS: <span class="text-[#d4af37]">ACTIVE</span></span>
+                            </div>
+                            <p class="text-center text-[0.65rem] text-stone-400 uppercase tracking-wide">Limited Availability</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Core Capabilities: Transition Modes -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">The Core Engine</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">3 Powerful Transition Modes.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Choose the perfect behavior for your effect.</p>
+                    </header>
+                    
+                    <div class="flex flex-col gap-12">
+                        <!-- Wipe Mode -->
+                        <article class="group relative overflow-hidden rounded-card bg-white shadow-card hover:shadow-soft transition-all flex flex-col md:flex-row items-stretch">
+                            <div class="aspect-video w-full md:w-1/2 overflow-hidden bg-stone-100">
+                                <img src="./Reveal.gif" alt="Wipe Mode" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col justify-center p-8 md:w-1/2 relative">
+                                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:left-0 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-[#d4af37] text-[#1c1917] font-bold ring-4 ring-white z-10 shadow-sm">1</div>
+                                <h3 class="font-display text-2xl font-bold text-[#1c1917] text-center md:text-left mt-4 md:mt-0 md:pl-8">Wipe / Reveal</h3>
+                                <p class="mt-2 text-stone-600 text-center md:text-left md:pl-8">A sharp, directional transition line. Perfect for scanning effects, sci-fi shields, and geometric reveals.</p>
+                            </div>
+                        </article>
+
+                        <!-- Blend Mode -->
+                        <article class="group relative overflow-hidden rounded-card bg-white shadow-card hover:shadow-soft transition-all flex flex-col md:flex-row-reverse items-stretch">
+                            <div class="aspect-video w-full md:w-1/2 overflow-hidden bg-stone-100">
+                                <img src="./Blend.gif" alt="Blend Mode" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col justify-center p-8 md:w-1/2 relative">
+                                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:right-0 md:left-auto md:top-1/2 md:translate-x-1/2 md:-translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-[#d4af37] text-[#1c1917] font-bold ring-4 ring-white z-10 shadow-sm">2</div>
+                                <h3 class="font-display text-2xl font-bold text-[#1c1917] text-center md:text-right mt-4 md:mt-0 md:pr-8">Blend / Mix</h3>
+                                <p class="mt-2 text-stone-600 text-center md:text-right md:pr-8">A smooth, gradient-based cross-dissolve. Ideal for subtle texture changes, aging effects, and organic morphs.</p>
+                            </div>
+                        </article>
+
+                        <!-- Reveal Mode -->
+                        <article class="group relative overflow-hidden rounded-card bg-white shadow-card hover:shadow-soft transition-all flex flex-col md:flex-row items-stretch">
+                            <div class="aspect-video w-full md:w-1/2 overflow-hidden bg-stone-100">
+                                <img src="./Transparent.gif" alt="Reveal Mode" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col justify-center p-8 md:w-1/2 relative">
+                                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:left-0 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-[#d4af37] text-[#1c1917] font-bold ring-4 ring-white z-10 shadow-sm">3</div>
+                                <h3 class="font-display text-2xl font-bold text-[#1c1917] text-center md:text-left mt-4 md:mt-0 md:pl-8">Alpha Reveal</h3>
+                                <p class="mt-2 text-stone-600 text-center md:text-left md:pl-8">Transition from transparency to full opacity. Create ghosting effects, hologram activations, and object materialization.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Procedural Noise Library -->
+                <section class="rounded-card bg-[#1c1917] p-8 text-white shadow-card sm:p-12">
+                    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Procedural Library</p>
+                                <h2 class="mt-2 font-display text-3xl font-bold">12 Noise Patterns Included.</h2>
+                                <p class="mt-4 text-stone-300 text-lg leading-relaxed">Don't settle for boring linear gradients. AnimTex includes a diverse library of procedural noise patterns to break up your transition lines.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Perlin</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Voronoi</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Magic</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Wave</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Musgrave</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Brick</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Checker</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Halftone</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Radial</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Diagonal</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Clouds</div>
+                                <div class="rounded bg-white/5 p-3 text-center text-sm font-medium text-stone-300 ring-1 ring-white/10">Caustic</div>
+                            </div>
+                        </div>
+                        <div class="relative aspect-square overflow-hidden rounded-xl bg-stone-800 ring-1 ring-white/10">
+                            <img src="./noise type.gif" alt="Noise Patterns" class="h-full w-full object-cover opacity-80">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1917] to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <p class="text-sm text-stone-400">Each pattern comes with exposed parameters like Scale, Detail, Distortion, and Roughness directly in the N-Panel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VFX Suite -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">VFX Suite</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">Cinema-Ready Polish.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Turn a simple transition into a visual spectacle with built-in effects.</p>
+                    </header>
+
+                    <div class="grid gap-8 md:grid-cols-2">
+                        <!-- Emission Line -->
+                        <article class="flex flex-col overflow-hidden rounded-card bg-white shadow-card ring-1 ring-stone-900/5">
+                            <div class="aspect-[16/9] w-full bg-stone-900">
+                                <img src="./Emission Line.png" alt="Emission Line" class="h-full w-full object-cover">
+                            </div>
+                            <div class="flex flex-1 flex-col p-8">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    </div>
+                                    <h3 class="font-display text-xl font-bold text-[#1c1917]">Emission Line</h3>
+                                </div>
+                                <p class="mb-6 text-stone-600 leading-relaxed">Generates a dynamic line of transition. Fully customizable color, width, and strength. The emission strength directly drives the intensity of the glare effect.</p>
+                                <ul class="mt-auto space-y-2 text-sm text-stone-500">
+                                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Custom Color & Strength</li>
+                                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Adjustable Width</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Compositor Glare -->
+                        <article class="flex flex-col overflow-hidden rounded-card bg-white shadow-card ring-1 ring-stone-900/5">
+                            <div class="aspect-[16/9] w-full bg-stone-900">
+                                <img src="./Compositor Glare.png" alt="Compositor Glare" class="h-full w-full object-cover">
+                            </div>
+                            <div class="flex flex-1 flex-col p-8">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                                    </div>
+                                    <h3 class="font-display text-xl font-bold text-[#1c1917]">Auto-Compositor Glare</h3>
+                                </div>
+                                <p class="mb-6 text-stone-600 leading-relaxed">No need to open the Compositor. AnimTex automatically sets up a Glare node pipeline to make your emission line bloom.</p>
+                                <ul class="mt-auto space-y-2 text-sm text-stone-500">
+                                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> One-Click Setup</li>
+                                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Threshold & Mix Controls</li>
+                                    <li class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2">
+                                            <svg class="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 
+                                            <span>Note: Enable "Always Compositor"</span>
+                                        </div>
+                                        <img src="./Enable Always Compositor.png" alt="Enable Always Compositor" class="ml-6 w-40 rounded border border-stone-200 shadow-sm">
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Image vs Material Mode -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Input Flexibility</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">Image Mode vs. Material Mode.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Two ways to build your transitions, depending on your complexity needs.</p>
+                    </header>
+
+                    <div class="grid gap-8 md:grid-cols-2">
+                        <!-- Image Mode -->
+                        <article class="rounded-card bg-white p-8 shadow-card ring-1 ring-stone-900/5">
+                            <h3 class="font-display text-xl font-bold text-[#1c1917]">Image Mode</h3>
+                            <p class="mt-2 text-sm font-medium text-[#d4af37]">Best for: Simple Texture Swaps</p>
+                            <div class="mb-6 mt-4 overflow-hidden rounded-lg bg-[#2b2b2b] p-3 font-sans text-[11px] text-[#e6e6e6] shadow-md ring-1 ring-stone-900/10 select-none max-w-[280px]">
+                                <!-- Header -->
+                                <div class="mb-2 flex items-center gap-2 text-[#e6e6e6]">
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/></svg>
+                                    <span>Input:</span>
+                                </div>
+
+                                <!-- Toggle -->
+                                <div class="mb-3 flex flex-col rounded bg-[#3d3d3d] overflow-hidden border border-[#1a1a1a]">
+                                    <div class="bg-[#4772b3] px-3 py-1.5 text-left text-white text-xs">Images</div>
+                                    <div class="px-3 py-1.5 text-left text-[#a5a5a5] text-xs border-t border-[#1a1a1a]">Materials</div>
+                                </div>
+
+                                <!-- Shader 1 -->
+                                <div class="mb-1 text-[#e6e6e6]">Shader 1:</div>
+                                <div class="mb-2 flex items-center gap-1 rounded bg-[#3d3d3d] p-0.5 border border-[#1a1a1a]">
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                                    </div>
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+                                    </div>
+                                    <div class="flex-1 px-2 text-center text-[#e6e6e6]">Open</div>
+                                </div>
+
+                                <!-- Shader 2 -->
+                                <div class="mb-1 text-[#e6e6e6]">Shader 2:</div>
+                                <div class="flex items-center gap-1 rounded bg-[#3d3d3d] p-0.5 border border-[#1a1a1a]">
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                                    </div>
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+                                    </div>
+                                    <div class="flex-1 px-2 text-center text-[#e6e6e6]">Open</div>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-stone-600 leading-relaxed">Directly blend between two image textures. AnimTex automatically sets up the Principled BSDF nodes for you.</p>
+                            <ul class="mt-6 space-y-2 text-sm text-stone-500">
+                                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Fast Setup</li>
+                                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Automatic Shader Creation</li>
+                            </ul>
+                        </article>
+
+                        <!-- Material Mode -->
+                        <article class="rounded-card bg-[#1c1917] p-8 shadow-card text-white">
+                            <h3 class="font-display text-xl font-bold text-white">Material Mode</h3>
+                            <p class="mt-2 text-sm font-medium text-[#d4af37]">Best for: Complex Shaders</p>
+                            <div class="mb-6 mt-4 overflow-hidden rounded-lg bg-[#2b2b2b] p-3 font-sans text-[11px] text-[#e6e6e6] shadow-md ring-1 ring-white/10 select-none max-w-[280px]">
+                                <!-- Header -->
+                                <div class="mb-2 flex items-center gap-2 text-[#e6e6e6]">
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/></svg>
+                                    <span>Input:</span>
+                                </div>
+
+                                <!-- Toggle -->
+                                <div class="mb-3 flex flex-col rounded bg-[#3d3d3d] overflow-hidden border border-[#1a1a1a]">
+                                    <div class="px-3 py-1.5 text-left text-[#a5a5a5] text-xs border-b border-[#1a1a1a]">Images</div>
+                                    <div class="bg-[#4772b3] px-3 py-1.5 text-left text-white text-xs">Materials</div>
+                                </div>
+
+                                <!-- Material 1 -->
+                                <div class="mb-1 text-[#e6e6e6]">Material 1:</div>
+                                <div class="mb-2 flex items-center gap-1 rounded bg-[#1d1d1d] p-0.5 border border-[#1a1a1a]">
+                                    <div class="flex h-5 w-6 items-center justify-center">
+                                        <svg class="h-3.5 w-3.5 text-[#d95646]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                    </div>
+                                    <div class="flex-1 px-2 text-left text-[#e6e6e6] text-[10px]">Material.001</div>
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3 w-3 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                                    </div>
+                                </div>
+
+                                <!-- Material 2 -->
+                                <div class="mb-1 text-[#e6e6e6]">Material 2:</div>
+                                <div class="flex items-center gap-1 rounded bg-[#1d1d1d] p-0.5 border border-[#1a1a1a]">
+                                    <div class="flex h-5 w-6 items-center justify-center">
+                                        <svg class="h-3.5 w-3.5 text-[#d95646]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                    </div>
+                                    <div class="flex-1 px-2 text-left text-[#e6e6e6] text-[10px]">Material.002</div>
+                                    <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5">
+                                        <svg class="h-3 w-3 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-stone-300 leading-relaxed">Deep-copy full node trees from existing materials. AnimTex preserves your complex node groups, drivers, and custom logic.</p>
+                            <ul class="mt-6 space-y-2 text-sm text-stone-400">
+                                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Preserves Node Groups</li>
+                                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Full Deep-Copy System</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Animation System -->
+                <section class="relative overflow-hidden rounded-card bg-stone-100 p-8 sm:p-12">
+                    <div class="absolute inset-0 opacity-5">
+                        <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path d="M0 100 C 20 0 50 0 100 100" stroke="currentColor" fill="none" />
+                        </svg>
+                    </div>
+                    
+                    <div class="relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
+                        <div class="order-2 lg:order-1">
+                            <img src="./Editor Graph.png" alt="Animation Curves" class="rounded-lg shadow-lg ring-1 ring-stone-900/10">
+                        </div>
+                        <div class="order-1 space-y-6 lg:order-2">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Animation System</p>
+                                <h2 class="mt-2 font-display text-3xl font-bold text-[#1c1917]">Auto-Keyframing & Interpolation.</h2>
+                                <p class="mt-4 text-stone-600 text-lg leading-relaxed">Forget the Graph Editor. AnimTex handles the motion for you.</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex gap-4">
+                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white shadow-sm text-[#d4af37]">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-[#1c1917]">Instant Setup</h4>
+                                        <p class="text-sm text-stone-600">Check "Auto Keyframe" and hit GO. AnimTex creates the start and end keys automatically.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white shadow-sm text-[#d4af37]">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-[#1c1917]">13 Interpolation Types</h4>
+                                        <p class="text-sm text-stone-600">Choose from Linear, Bezier, Bounce, Elastic, Back, and more directly from the UI.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Engine Support -->
+                <section class="overflow-hidden rounded-card bg-[#1c1917] text-white shadow-card">
+                    <div class="flex flex-col gap-6 px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+                        <div class="space-y-2">
+                            <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Compatibility</p>
+                            <h2 class="text-xl font-bold sm:text-2xl">Works with <span class="text-[#d4af37]">Blender 4.1+</span></h2>
+                            <p class="text-sm text-stone-400">Built for the latest Cycles and Eevee Next engines.</p>
+                        </div>
+                        <div class="flex shrink-0 items-center gap-4">
+                            <div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-[#d4af37]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs font-bold uppercase tracking-wider text-stone-500">Verified</div>
+                                <div class="font-mono text-lg font-bold text-white">v1.0.5</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How it Works -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">The Mechanism</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">How it Works.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Simple, intuitive control using standard Blender tools.</p>
+                    </header>
+
+                    <div class="rounded-card bg-[#1c1917] p-8 md:p-12 shadow-card overflow-hidden relative">
+                        <!-- Background Grid -->
+                        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;"></div>
+                        
+                        <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                            <!-- Illustration -->
+                            <div class="relative aspect-square max-w-md mx-auto w-full flex items-center justify-center">
+                                <!-- The Empty Object (CSS/SVG) -->
+                                <div class="relative w-64 h-64 transition-transform duration-700 hover:scale-105">
+                                    <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-2xl">
+                                        <!-- Axes -->
+                                        <line x1="100" y1="100" x2="180" y2="100" stroke="#ff4d4d" stroke-width="2" stroke-linecap="round" /> <!-- X Red -->
+                                        <line x1="100" y1="100" x2="100" y2="20" stroke="#4d4dff" stroke-width="2" stroke-linecap="round" /> <!-- Z Blue (Up) -->
+                                        <line x1="100" y1="100" x2="40" y2="160" stroke="#4dff4d" stroke-width="2" stroke-linecap="round" /> <!-- Y Green (Depth) -->
+                                        
+                                        <!-- Sphere Rings (Orange #ffaa00) -->
+                                        <!-- Ring 1 -->
+                                        <ellipse cx="100" cy="100" rx="70" ry="25" fill="none" stroke="#ffaa00" stroke-width="2" transform="rotate(0 100 100)" />
+                                        <!-- Ring 2 -->
+                                        <ellipse cx="100" cy="100" rx="70" ry="25" fill="none" stroke="#ffaa00" stroke-width="2" transform="rotate(60 100 100)" />
+                                        <!-- Ring 3 -->
+                                        <ellipse cx="100" cy="100" rx="70" ry="25" fill="none" stroke="#ffaa00" stroke-width="2" transform="rotate(-60 100 100)" />
+                                        
+                                        <!-- Center Dashed Circle -->
+                                        <circle cx="100" cy="100" r="12" fill="none" stroke="white" stroke-width="2" stroke-dasharray="4 4" />
+                                        <circle cx="100" cy="100" r="12" fill="none" stroke="#ff4d4d" stroke-width="2" stroke-dasharray="4 4" stroke-dashoffset="4" />
+                                    </svg>
+                                    
+                                    <!-- Label -->
+                                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#2b2b2b] px-3 py-1 rounded border border-stone-700 text-xs text-stone-300 whitespace-nowrap shadow-lg">
+                                        AnimTex_Controller (Empty)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Explanation -->
+                            <div class="space-y-8">
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37] font-bold ring-1 ring-[#d4af37]/30">1</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">The Controller</h3>
+                                        <p class="mt-2 text-stone-400 leading-relaxed">AnimTex creates a standard Blender Empty object called <code class="text-stone-300 bg-white/5 px-1.5 py-0.5 rounded text-xs">AnimTex_Controller</code>. This invisible helper acts as the anchor for your transition.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37] font-bold ring-1 ring-[#d4af37]/30">2</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">Object Coordinates</h3>
+                                        <p class="mt-2 text-stone-400 leading-relaxed">The shader calculates the distance from this Empty object. As you move the Empty in 3D space, the "zero point" of the transition moves with it.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37] font-bold ring-1 ring-[#d4af37]/30">3</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">Total Control</h3>
+                                        <p class="mt-2 text-stone-400 leading-relaxed">
+                                            <span class="text-white">Move</span> to slide the wipe.<br>
+                                            <span class="text-white">Rotate</span> to angle the transition.<br>
+                                            <span class="text-white">Scale</span> to adjust the gradient falloff.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Deep Dive / Hero 2 -->
+                <section class="relative overflow-hidden rounded-card shadow-card min-h-[600px]">
+                    <div class="absolute inset-0">
+                        <img src="./Shader Node.png" alt="Shader Node Graph" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#1c1917]/90 via-[#1c1917]/60 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10 flex h-full flex-col justify-center px-8 py-16 md:px-16 md:py-24">
+                        <div class="max-w-lg space-y-6">
+                            <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                                <span class="h-2 w-2 rounded-full bg-[#d4af37]"></span>
+                                <span>Pro Workflow</span>
+                            </div>
+                            <h2 class="font-display text-4xl font-bold text-white leading-tight">Cinematic quality,<br>complete control.</h2>
+                            <p class="text-lg text-stone-300 leading-relaxed">Stop fighting with nodes. AnimTex gives you a high-level control system that handles the math for you, so you can focus on the art.</p>
+                            
+                            <ul class="mt-8 space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-[#d4af37] text-[#1c1917]">
+                                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white">Non-destructive Workflow</h3>
+                                        <p class="text-sm text-stone-400 mt-1">Change any parameter at any time without breaking your setup.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-[#d4af37] text-[#1c1917]">
+                                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white">Real-time Feedback</h3>
+                                        <p class="text-sm text-stone-400 mt-1">See your changes instantly in the viewport.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Use Cases Section -->
+                <section class="space-y-8">
+                    <header class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+                        <div class="space-y-2">
+                            <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Real-World Applications</p>
+                            <h2 class="font-display text-3xl font-bold text-[#1c1917]">What can you create?</h2>
+                            <p class="text-stone-600">Designed for VFX artists, Motion Designers, and ArchViz pros.</p>
+                        </div>
+                    </header>
+                    
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5 hover:shadow-md transition-all">
+                            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 text-purple-600">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                            </div>
+                            <h3 class="font-bold text-[#1c1917]">Sci-Fi VFX</h3>
+                            <p class="mt-2 text-sm text-stone-600">Create cloaking fields, hologram activations, and shield impacts using <strong>Voronoi</strong> and <strong>Magic</strong> noise combined with the <strong>Emission Line</strong>.</p>
+                        </article>
+                        
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5 hover:shadow-md transition-all">
+                            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                            </div>
+                            <h3 class="font-bold text-[#1c1917]">ArchViz</h3>
+                            <p class="mt-2 text-sm text-stone-600">Instantly swap wall materials (e.g., clean to dirty, brick to plaster) using <strong>Material Deep Copy</strong> to blend complex node trees seamlessly.</p>
+                        </article>
+
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5 hover:shadow-md transition-all">
+                            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-pink-100 text-pink-600">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" /></svg>
+                            </div>
+                            <h3 class="font-bold text-[#1c1917]">Motion Graphics</h3>
+                            <p class="mt-2 text-sm text-stone-600">Design retro kinetic typography and logo reveals using <strong>Halftone</strong>, <strong>Diagonal</strong>, and <strong>Radial</strong> patterns with <strong>Elastic</strong> interpolation.</p>
+                        </article>
+
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5 hover:shadow-md transition-all">
+                            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                            </div>
+                            <h3 class="font-bold text-[#1c1917]">Product Viz</h3>
+                            <p class="mt-2 text-sm text-stone-600">Showcase internal components with X-Ray effects using the <strong>Reveal from Transparent</strong> mode and <strong>Caustic</strong> noise patterns.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Full Interface Demo -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Interactive Demo</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">The Full Control Panel.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Hover over any element to see what it does. Click buttons to interact.</p>
+                    </header>
+
+                    <div id="demo-ui" class="mx-auto max-w-[400px] overflow-hidden rounded-lg bg-[#2b2b2b] shadow-2xl ring-1 ring-stone-900/10 font-sans text-[11px] text-[#e6e6e6] select-none relative cursor-default">
+                        
+                        <!-- Dynamic Tooltip -->
+                        <div id="demo-tooltip" class="pointer-events-none fixed z-[100] hidden rounded bg-[#1c1917] px-2 py-1.5 text-[10px] text-stone-300 shadow-xl border border-stone-700 max-w-[200px] leading-tight">
+                            <strong id="tooltip-title" class="block mb-0.5 text-[#d4af37]"></strong>
+                            <span id="tooltip-desc"></span>
+                        </div>
+
+                        <!-- Header -->
+                        <div class="flex items-center justify-between bg-[#2b2b2b] px-2 py-1 border-b border-[#1a1a1a]">
+                            <div class="flex items-center gap-1">
+                                <svg class="h-3 w-3 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                <span>AnimTex</span>
+                            </div>
+                            <svg class="h-3 w-3 opacity-50" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="12" r="2"/></svg>
+                        </div>
+
+                        <div class="p-2 space-y-2">
+                            <!-- Input Panel -->
+                            <div class="rounded bg-[#303030] p-2 border border-[#1a1a1a] space-y-2">
+                                <div class="flex items-center gap-2 mb-1" data-title="Input Mode" data-desc="Choose between image textures or existing materials">
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/></svg>
+                                    <span>Input:</span>
+                                </div>
+                                
+                                <!-- Toggle -->
+                                <div class="flex flex-col rounded bg-[#3d3d3d] overflow-hidden border border-[#1a1a1a] cursor-pointer" onclick="toggleInputMode(this)" data-title="Input Mode" data-desc="Click to switch between Image and Material modes">
+                                    <div id="mode-images" class="bg-[#4772b3] px-3 py-1.5 text-left text-white text-xs transition-colors">Images</div>
+                                    <div id="mode-materials" class="px-3 py-1.5 text-left text-[#a5a5a5] text-xs border-t border-[#1a1a1a] transition-colors">Materials</div>
+                                </div>
+
+                                <!-- Image Inputs (Visible by default) -->
+                                <div id="inputs-image" class="space-y-2">
+                                    <div class="space-y-1">
+                                        <div data-title="Texture 1" data-desc="First texture to blend from">Shader 1:</div>
+                                        <div class="flex items-center gap-1 rounded bg-[#3d3d3d] p-0.5 border border-[#1a1a1a] hover:border-[#555] transition-colors cursor-pointer" data-title="Texture 1" data-desc="Click to open image file">
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg></div>
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg></div>
+                                            <div class="flex-1 px-2 text-center text-[#e6e6e6]">Open</div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <div data-title="Texture 2" data-desc="Second texture to blend to">Shader 2:</div>
+                                        <div class="flex items-center gap-1 rounded bg-[#3d3d3d] p-0.5 border border-[#1a1a1a] hover:border-[#555] transition-colors cursor-pointer" data-title="Texture 2" data-desc="Click to open image file">
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg></div>
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3.5 w-3.5 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg></div>
+                                            <div class="flex-1 px-2 text-center text-[#e6e6e6]">Open</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Material Inputs (Hidden by default) -->
+                                <div id="inputs-material" class="space-y-2 hidden">
+                                    <div class="space-y-1">
+                                        <div data-title="Material 1" data-desc="First material/shader to blend from">Shader 1:</div>
+                                        <div class="flex items-center gap-1 rounded bg-[#1d1d1d] p-0.5 border border-[#1a1a1a] hover:border-[#555] transition-colors cursor-pointer" data-title="Material 1" data-desc="Select source material">
+                                            <div class="flex h-5 w-6 items-center justify-center"><svg class="h-3.5 w-3.5 text-[#d95646]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></div>
+                                            <div class="flex-1 px-2 text-left text-[#e6e6e6] text-[10px]">Material.001</div>
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3 w-3 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <div data-title="Material 2" data-desc="Second material/shader to blend to">Shader 2:</div>
+                                        <div class="flex items-center gap-1 rounded bg-[#1d1d1d] p-0.5 border border-[#1a1a1a] hover:border-[#555] transition-colors cursor-pointer" data-title="Material 2" data-desc="Select target material">
+                                            <div class="flex h-5 w-6 items-center justify-center"><svg class="h-3.5 w-3.5 text-[#d95646]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></div>
+                                            <div class="flex-1 px-2 text-left text-[#e6e6e6] text-[10px]">Material.002</div>
+                                            <div class="flex h-5 w-6 items-center justify-center rounded-sm hover:bg-white/5"><svg class="h-3 w-3 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Settings Panel -->
+                            <div class="rounded bg-[#303030] p-2 border border-[#1a1a1a] space-y-2">
+                                <div class="flex items-center gap-2 mb-1" data-title="Settings" data-desc="Main configuration for the transition material">
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.488.488 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.58 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                                    <span>Settings:</span>
+                                </div>
+
+                                <div class="grid grid-cols-[80px_1fr] gap-2 items-center">
+                                    <div class="text-right" data-title="Material Name" data-desc="Name for the created material">Material Name:</div>
+                                    <div class="bg-[#1d1d1d] border border-[#1a1a1a] rounded px-2 py-1 text-[#e6e6e6] cursor-text hover:border-[#555]" data-title="Material Name" data-desc="Click to rename">AnimTex</div>
+                                </div>
+
+                                <div class="grid grid-cols-[80px_1fr] gap-2 items-start relative">
+                                    <div class="text-right mt-1" data-title="Transition Mode" data-desc="Type of transition effect">Transition Mode:</div>
+                                    <div class="w-full relative">
+                                        <div id="transition-dropdown-btn" class="bg-[#1d1d1d] border border-[#1a1a1a] rounded px-2 py-1 text-[#e6e6e6] flex justify-between items-center cursor-pointer hover:border-[#555]" onclick="toggleDropdown('transition-dropdown')" data-title="Transition Mode" data-desc="Click to change transition type">
+                                            <span id="selected-transition">Wipe/Reveal</span>
+                                            <svg class="h-3 w-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                        </div>
+                                        <!-- Dropdown Menu -->
+                                        <div id="transition-dropdown" class="absolute left-0 right-0 top-full mt-1 bg-[#1d1d1d] border border-[#1a1a1a] rounded shadow-xl z-50 hidden">
+                                            <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectTransition('Wipe/Reveal', 'WIPE')">Wipe/Reveal</div>
+                                            <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectTransition('Blend/Mix', 'BLEND')">Blend/Mix</div>
+                                            <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectTransition('Reveal from Transparent', 'REVEAL')">Reveal from Transparent</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center py-2">
+                                    <div class="w-24 h-24 flex ring-1 ring-white/10">
+                                        <div id="preview-left" class="w-1/2 h-full bg-[#4772b3] transition-all duration-500"></div>
+                                        <div id="preview-right" class="w-1/2 h-full bg-[#d95646] transition-all duration-500"></div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2 cursor-pointer" onclick="toggleCheckbox(this)" data-title="Apply to Selected" data-desc="Apply material to selected objects, otherwise create standalone material">
+                                    <div class="bg-[#4772b3] rounded-sm p-0.5 checkbox-box"><svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg></div>
+                                    <span>Apply to Selected</span>
+                                </div>
+                            </div>
+
+                            <!-- Collapsible Panels -->
+                            <!-- Transition Line -->
+                            <div class="rounded bg-[#303030] border border-[#1a1a1a] overflow-hidden">
+                                <div class="flex items-center gap-2 p-2 bg-[#3d3d3d]/50 cursor-pointer hover:bg-[#3d3d3d]" onclick="togglePanel(this)" data-title="Noise Engine" data-desc="Add procedural noise to break up the transition edge">
+                                    <svg class="h-3 w-3 opacity-70 transform transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M20.71 5.63l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-3.12 3.12-1.93-1.91-1.41 1.41 1.42 1.42L3 16.25V21h4.75l8.92-8.92 1.42 1.42 1.41-1.41-1.92-1.92 3.12-3.12c.4-.4.4-1.03.01-1.42zM5.25 19H5v-.25l8.92-8.92 1.25 1.25L5.25 19z"/></svg>
+                                    <span class="flex-1">Transition Line:</span>
+                                </div>
+                                <div class="p-2 panel-content hidden space-y-2">
+                                    <div class="flex items-center gap-2 cursor-pointer mb-2" onclick="toggleCheckbox(this, 'noise-settings')" data-title="Add Noise" data-desc="Add noise texture to soften the transition line">
+                                        <div class="w-3 h-3 border border-[#555] rounded-sm bg-[#2b2b2b] checkbox-box flex items-center justify-center"></div>
+                                        <span class="text-[#a5a5a5]">Add Noise to Transition</span>
+                                    </div>
+
+                                    <div id="noise-settings" class="space-y-2 hidden pl-2 border-l border-[#3d3d3d]">
+                                        <!-- Noise Type Dropdown -->
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-start relative">
+                                            <div class="text-right mt-1 text-[#e6e6e6]" data-title="Noise Type" data-desc="Type of noise pattern to use">Noise Type:</div>
+                                            <div class="w-full relative">
+                                                <div class="bg-[#1d1d1d] border border-[#1a1a1a] rounded px-2 py-1 text-[#e6e6e6] flex justify-between items-center cursor-pointer hover:border-[#555]" onclick="toggleDropdown('noise-dropdown')" id="noise-type-btn">
+                                                    <span>Perlin Noise</span>
+                                                    <svg class="h-3 w-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                                </div>
+                                                <div id="noise-dropdown" class="absolute left-0 right-0 top-full mt-1 bg-[#1d1d1d] border border-[#1a1a1a] rounded shadow-xl z-50 hidden max-h-48 overflow-y-auto">
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Perlin Noise', 'PERLIN')">Perlin Noise</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Voronoi Cells', 'VORONOI')">Voronoi Cells</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Magic Pixelated', 'MAGIC')">Magic Pixelated</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Wave Bands', 'WAVE')">Wave Bands</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Musgrave Terrain', 'MUSGRAVE')">Musgrave Terrain</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Brick Grid', 'BRICK')">Brick Grid</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Checker Grid', 'CHECKER')">Checker Grid</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Halftone Dots', 'HALFTONE')">Halftone Dots</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Radial Gradient', 'RADIAL')">Radial Gradient</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Diagonal Stripes', 'DIAGONAL')">Diagonal Stripes</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Soft Clouds', 'CLOUDS')">Soft Clouds</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectNoise('Caustic Light', 'CAUSTIC')">Caustic Light</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Dynamic Noise Params -->
+                                        <div id="noise-params-PERLIN" class="space-y-1">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Perlin noise scale">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Detail" data-desc="Perlin noise detail">
+                                                <div class="text-right text-[#e6e6e6]">Detail:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[12%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Roughness" data-desc="Perlin noise roughness">
+                                                <div class="text-right text-[#e6e6e6]">Roughness:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[50%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.50</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Distortion" data-desc="Perlin noise distortion">
+                                                <div class="text-right text-[#e6e6e6]">Distortion:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[0%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-VORONOI" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Voronoi cell size">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">8.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Randomness" data-desc="Cell randomness">
+                                                <div class="text-right text-[#e6e6e6]">Randomness:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[100%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">1.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-MAGIC" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Depth" data-desc="Magic texture depth (higher = more blocky)">
+                                                <div class="text-right text-[#e6e6e6]">Depth:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Turbulence" data-desc="Magic texture turbulence">
+                                                <div class="text-right text-[#e6e6e6]">Turbulence:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[15%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-WAVE" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Wave frequency">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Distortion" data-desc="Wave distortion amount">
+                                                <div class="text-right text-[#e6e6e6]">Distortion:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[0%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Detail" data-desc="Wave detail level">
+                                                <div class="text-right text-[#e6e6e6]">Detail:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[12%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-MUSGRAVE" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Musgrave scale">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Detail" data-desc="Musgrave detail">
+                                                <div class="text-right text-[#e6e6e6]">Detail:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[12%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Dimension" data-desc="Musgrave dimension">
+                                                <div class="text-right text-[#e6e6e6]">Dimension:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-CHECKER" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Checker size">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">8.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-BRICK" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Brick size">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Mortar" data-desc="Mortar thickness">
+                                                <div class="text-right text-[#e6e6e6]">Mortar:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[4%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.02</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Row Height" data-desc="Brick row height">
+                                                <div class="text-right text-[#e6e6e6]">Row Height:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.25</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-HALFTONE" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Dot density">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[30%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">15.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Smoothness" data-desc="Dot edge softness">
+                                                <div class="text-right text-[#e6e6e6]">Smoothness:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[10%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.10</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-RADIAL" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Ring frequency">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-DIAGONAL" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Stripe frequency">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">10.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Angle" data-desc="Stripe angle in degrees">
+                                                <div class="text-right text-[#e6e6e6]">Angle:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[50%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">45.0°</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-CLOUDS" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Cloud size">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[15%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">3.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Blur" data-desc="Cloud softness">
+                                                <div class="text-right text-[#e6e6e6]">Blur:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="noise-params-CAUSTIC" class="space-y-1 hidden">
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Scale" data-desc="Caustic pattern size">
+                                                <div class="text-right text-[#e6e6e6]">Scale:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[25%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">8.00</div></div>
+                                            </div>
+                                            <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Sharpness" data-desc="Caustic edge sharpness">
+                                                <div class="text-right text-[#e6e6e6]">Sharpness:</div>
+                                                <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[20%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">2.00</div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Emission Line -->
+                            <div class="rounded bg-[#303030] border border-[#1a1a1a] overflow-hidden">
+                                <div class="flex items-center gap-2 p-2 bg-[#3d3d3d]/50 cursor-pointer hover:bg-[#3d3d3d]" onclick="togglePanel(this)" data-title="Emission" data-desc="Create a glowing edge at the transition point">
+                                    <svg class="h-3 w-3 opacity-70 transform transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+                                    <span class="flex-1">Emission Line:</span>
+                                </div>
+                                <div class="p-2 panel-content hidden space-y-2">
+                                    <div class="flex items-center gap-2 cursor-pointer mb-2" onclick="toggleCheckbox(this, 'emission-settings')" data-title="Add Emission" data-desc="Add a colorful emission line at the transition">
+                                        <div class="w-3 h-3 border border-[#555] rounded-sm bg-[#2b2b2b] checkbox-box flex items-center justify-center"></div>
+                                        <span class="text-[#a5a5a5]">Add Emission Line</span>
+                                    </div>
+
+                                    <div id="emission-settings" class="space-y-2 hidden pl-2 border-l border-[#3d3d3d]">
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Emission Color" data-desc="Color of the emission line">
+                                            <div class="text-right text-[#e6e6e6]">Color:</div>
+                                            <div class="h-5 bg-[#3d3d3d] rounded border border-[#1a1a1a] p-0.5 flex cursor-pointer hover:border-[#555]">
+                                                <div class="flex-1 bg-[#ff8000] rounded-sm"></div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Emission Strength" data-desc="Strength of the emission">
+                                            <div class="text-right text-[#e6e6e6]">Strength:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[15%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">5.00</div></div>
+                                        </div>
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Emission Width" data-desc="Width of the emission line">
+                                            <div class="text-right text-[#e6e6e6]">Width:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[10%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">0.02</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Compositor Glare -->
+                            <div class="rounded bg-[#303030] border border-[#1a1a1a] overflow-hidden">
+                                <div class="flex items-center gap-2 p-2 bg-[#3d3d3d]/50 cursor-pointer hover:bg-[#3d3d3d]" onclick="togglePanel(this)" data-title="Auto-Compositor" data-desc="Automatically sets up Glare nodes for bloom effects">
+                                    <svg class="h-3 w-3 opacity-70 transform transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 9c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-1.41-1.41zM7.4 16.95c-.39-.39-1.02-.39-1.41 0l-1.41 1.41a.996.996 0 0 0 0 1.41c.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41zm12.02-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41z"/></svg>
+                                    <span class="flex-1">Compositor Glare:</span>
+                                </div>
+                                <div class="p-2 panel-content hidden space-y-2">
+                                    <div class="flex items-center gap-2 cursor-pointer mb-2" onclick="toggleCheckbox(this, 'glare-settings')" data-title="Enable Glare" data-desc="Add bloom/glow effect using compositor glare node">
+                                        <div class="w-3 h-3 border border-[#555] rounded-sm bg-[#2b2b2b] checkbox-box flex items-center justify-center"></div>
+                                        <span class="text-[#a5a5a5]">Enable Compositor Glare</span>
+                                    </div>
+
+                                    <div id="glare-settings" class="space-y-2 hidden pl-2 border-l border-[#3d3d3d]">
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Threshold" data-desc="Brightness threshold for glare effect">
+                                            <div class="text-right text-[#e6e6e6]">Threshold:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[10%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">1.00</div></div>
+                                        </div>
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Mix" data-desc="Mix factor for glare effect">
+                                            <div class="text-right text-[#e6e6e6]">Mix:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[100%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">1.00</div></div>
+                                        </div>
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Size" data-desc="Glare blur iterations (6-9)">
+                                            <div class="text-right text-[#e6e6e6]">Size:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[0%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">6</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Animation -->
+                            <div class="rounded bg-[#303030] border border-[#1a1a1a] overflow-hidden">
+                                <div class="flex items-center gap-2 p-2 bg-[#3d3d3d]/50 cursor-pointer hover:bg-[#3d3d3d]" onclick="togglePanel(this)" data-title="Animation" data-desc="Animation settings and keyframing">
+                                    <svg class="h-3 w-3 opacity-70 transform transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+                                    <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2zm5 0h-2V7h-2v5h-2v2h2v5h2v-5h2v-2z"/></svg>
+                                    <span class="flex-1">Animation:</span>
+                                </div>
+                                <div class="p-2 panel-content hidden space-y-2">
+                                    <div class="flex items-center gap-2 cursor-pointer mb-2" onclick="toggleCheckbox(this, 'anim-settings')" data-title="Auto Keyframe" data-desc="Automatically create keyframes for the animation">
+                                        <div class="w-3 h-3 border border-[#555] rounded-sm bg-[#2b2b2b] checkbox-box flex items-center justify-center"></div>
+                                        <span class="text-[#a5a5a5]">Auto Keyframe</span>
+                                    </div>
+
+                                    <div id="anim-settings" class="space-y-2 hidden pl-2 border-l border-[#3d3d3d]">
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-center text-[10px]" data-title="Length" data-desc="Number of frames for the animation">
+                                            <div class="text-right text-[#e6e6e6]">Length:</div>
+                                            <div class="relative h-5 bg-[#545454] rounded overflow-hidden group cursor-ew-resize hover:ring-1 hover:ring-white/20"><div class="absolute top-0 left-0 h-full bg-[#4772b3] w-[30%]"></div><div class="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">120</div></div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-[80px_1fr] gap-2 items-start relative">
+                                            <div class="text-right mt-1 text-[#e6e6e6]" data-title="Interpolation" data-desc="Interpolation type for animation keyframes">Interpolation:</div>
+                                            <div class="w-full relative">
+                                                <div class="bg-[#1d1d1d] border border-[#1a1a1a] rounded px-2 py-1 text-[#e6e6e6] flex justify-between items-center cursor-pointer hover:border-[#555]" onclick="toggleDropdown('interp-dropdown')" id="interp-btn">
+                                                    <span>Linear</span>
+                                                    <svg class="h-3 w-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                                </div>
+                                                <div id="interp-dropdown" class="absolute left-0 right-0 top-full mt-1 bg-[#1d1d1d] border border-[#1a1a1a] rounded shadow-xl z-50 hidden max-h-48 overflow-y-auto">
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Constant')">Constant</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Linear')">Linear</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Bezier')">Bezier</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Sinusoidal')">Sinusoidal</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Quadratic')">Quadratic</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Cubic')">Cubic</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Quartic')">Quartic</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Quintic')">Quintic</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Exponential')">Exponential</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Circular')">Circular</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Back')">Back</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Bounce')">Bounce</div>
+                                                    <div class="px-2 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer" onclick="selectInterp('Elastic')">Elastic</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GO Button -->
+                            <button class="w-full rounded bg-[#4a4a4a] py-2 text-center font-bold text-[#e6e6e6] hover:bg-[#5a5a5a] transition-colors border border-[#3a3a3a] flex items-center justify-center gap-2 active:bg-[#3a3a3a] active:scale-[0.98]" onclick="runDemo()" data-title="Execute" data-desc="Create an animated blend between two textures">
+                                <svg class="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                GO!
+                            </button>
+
+                            <!-- Instructions -->
+                            <div class="rounded bg-[#303030] p-2 border border-[#1a1a1a] space-y-2 text-[10px] text-[#e6e6e6]">
+                                <div class="flex items-center gap-2 font-bold">
+                                    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+                                    Instructions:
+                                </div>
+                                <ol class="list-decimal list-inside space-y-1 text-[#a5a5a5]">
+                                    <li>Select two textures above</li>
+                                    <li>Choose transition mode</li>
+                                    <li>Click GO!</li>
+                                    <li>Move/Rotate Empty freely</li>
+                                </ol>
+                                <p class="text-[#a5a5a5] pl-3">(Wipe: Any direction works!)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // Tooltip Logic
+                        const tooltip = document.getElementById('demo-tooltip');
+                        const tooltipTitle = document.getElementById('tooltip-title');
+                        const tooltipDesc = document.getElementById('tooltip-desc');
+                        const demoUI = document.getElementById('demo-ui');
+
+                        demoUI.addEventListener('mousemove', (e) => {
+                            const target = e.target.closest('[data-title]');
+                            if (target) {
+                                tooltipTitle.textContent = target.dataset.title;
+                                tooltipDesc.textContent = target.dataset.desc;
+                                tooltip.classList.remove('hidden');
+                                
+                                // Position tooltip next to cursor
+                                const x = e.clientX + 15;
+                                const y = e.clientY + 15;
+                                tooltip.style.left = `${x}px`;
+                                tooltip.style.top = `${y}px`;
+                            } else {
+                                tooltip.classList.add('hidden');
+                            }
+                        });
+
+                        demoUI.addEventListener('mouseleave', () => {
+                            tooltip.classList.add('hidden');
+                        });
+
+                        // Interaction Logic
+                        function toggleInputMode(el) {
+                            const imgBtn = document.getElementById('mode-images');
+                            const matBtn = document.getElementById('mode-materials');
+                            const imgInputs = document.getElementById('inputs-image');
+                            const matInputs = document.getElementById('inputs-material');
+                            
+                            if (imgBtn.classList.contains('bg-[#4772b3]')) {
+                                // Switch to Materials
+                                imgBtn.className = 'px-3 py-1.5 text-left text-[#a5a5a5] text-xs border-b border-[#1a1a1a] transition-colors';
+                                matBtn.className = 'bg-[#4772b3] px-3 py-1.5 text-left text-white text-xs transition-colors';
+                                imgInputs.classList.add('hidden');
+                                matInputs.classList.remove('hidden');
+                            } else {
+                                // Switch to Images
+                                imgBtn.className = 'bg-[#4772b3] px-3 py-1.5 text-left text-white text-xs transition-colors';
+                                matBtn.className = 'px-3 py-1.5 text-left text-[#a5a5a5] text-xs border-t border-[#1a1a1a] transition-colors';
+                                imgInputs.classList.remove('hidden');
+                                matInputs.classList.add('hidden');
+                            }
+                        }
+
+                        function toggleDropdown(id) {
+                            const dropdown = document.getElementById(id);
+                            dropdown.classList.toggle('hidden');
+                        }
+
+                        function selectTransition(name, type) {
+                            document.getElementById('selected-transition').textContent = name;
+                            document.getElementById('transition-dropdown').classList.add('hidden');
+                            
+                            // Update preview colors based on mode
+                            const left = document.getElementById('preview-left');
+                            const right = document.getElementById('preview-right');
+                            
+                            if (type === 'WIPE') {
+                                left.style.width = '50%';
+                                right.style.width = '50%';
+                                left.style.opacity = '1';
+                                right.style.opacity = '1';
+                            } else if (type === 'BLEND') {
+                                left.style.width = '50%';
+                                right.style.width = '50%';
+                                left.style.opacity = '0.5';
+                                right.style.opacity = '0.5';
+                            } else if (type === 'REVEAL') {
+                                left.style.width = '0%';
+                                right.style.width = '100%';
+                                right.style.opacity = '1';
+                            }
+                        }
+
+                        function selectNoise(name, type) {
+                            // Update button text
+                            document.querySelector('#noise-type-btn span').textContent = name;
+                            document.getElementById('noise-dropdown').classList.add('hidden');
+                            
+                            // Hide all params
+                            const allParams = document.querySelectorAll('[id^="noise-params-"]');
+                            allParams.forEach(el => el.classList.add('hidden'));
+                            
+                            // Show selected params
+                            const target = document.getElementById(`noise-params-${type}`);
+                            if (target) target.classList.remove('hidden');
+                        }
+
+                        function selectInterp(name) {
+                            document.querySelector('#interp-btn span').textContent = name;
+                            document.getElementById('interp-dropdown').classList.add('hidden');
+                        }
+
+                        function toggleCheckbox(el, targetId) {
+                            const box = el.querySelector('.checkbox-box');
+                            const isChecked = box.classList.contains('bg-[#4772b3]');
+                            
+                            if (isChecked) {
+                                box.className = 'w-3 h-3 border border-[#555] rounded-sm bg-[#2b2b2b] checkbox-box flex items-center justify-center';
+                                box.innerHTML = '';
+                                if (targetId) document.getElementById(targetId).classList.add('hidden');
+                            } else {
+                                box.className = 'bg-[#4772b3] rounded-sm p-0.5 checkbox-box flex items-center justify-center w-3 h-3';
+                                box.innerHTML = '<svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>';
+                                if (targetId) document.getElementById(targetId).classList.remove('hidden');
+                            }
+                        }
+
+                        function togglePanel(el) {
+                            const arrow = el.querySelector('svg');
+                            const content = el.nextElementSibling;
+                            
+                            if (content.classList.contains('hidden')) {
+                                content.classList.remove('hidden');
+                                arrow.style.transform = 'rotate(0deg)';
+                            } else {
+                                content.classList.add('hidden');
+                                arrow.style.transform = 'rotate(-90deg)';
+                            }
+                        }
+                        
+                        function runDemo() {
+                            const btn = event.currentTarget;
+                            const originalText = btn.innerHTML;
+                            btn.innerHTML = '<svg class="animate-spin h-3 w-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processing...';
+                            setTimeout(() => {
+                                btn.innerHTML = '<svg class="h-3 w-3 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Done!';
+                                setTimeout(() => {
+                                    btn.innerHTML = originalText;
+                                }, 1500);
+                            }, 1000);
+                        }
+                    </script>
+                </section>
+
+                <!-- Technical Specs -->
+                <section class="space-y-6">
+                    <header class="space-y-2">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Technical Specifications</p>
+                        <h2 class="font-display text-2xl font-bold text-[#1c1917]">Complete Feature List</h2>
+                        <p class="text-stone-600">Everything included in version 1.0.5</p>
+                    </header>
+                    <div class="overflow-hidden rounded-card border border-stone-200 bg-white shadow-sm">
+                        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-stone-200">
+                            <!-- Column 1 -->
+                            <div class="p-6 space-y-6">
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917] mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                        Input & Transition
+                                    </h3>
+                                    <ul class="space-y-2 text-sm text-stone-600">
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Image Mode:</strong> Blend two image textures directly.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Material Mode:</strong> Deep-copy full node trees from existing materials.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Wipe Mode:</strong> Sharp, directional transition line.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Blend Mode:</strong> Smooth, gradient-based mixing.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Reveal Mode:</strong> Transition from transparent (Alpha) to material.</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917] mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                                        Procedural Noise Engine
+                                    </h3>
+                                    <div class="grid grid-cols-2 gap-2 text-sm text-stone-600">
+                                        <span>• Perlin (Organic)</span>
+                                        <span>• Voronoi (Cells)</span>
+                                        <span>• Magic (Retro)</span>
+                                        <span>• Wave (Bands)</span>
+                                        <span>• Musgrave (Terrain)</span>
+                                        <span>• Brick (Grid)</span>
+                                        <span>• Checker (Squares)</span>
+                                        <span>• Halftone (Dots)</span>
+                                        <span>• Radial (Rings)</span>
+                                        <span>• Diagonal (Stripes)</span>
+                                        <span>• Clouds (Soft)</span>
+                                        <span>• Caustic (Water)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="p-6 space-y-6">
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917] mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                        VFX & Compositing
+                                    </h3>
+                                    <ul class="space-y-2 text-sm text-stone-600">
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Emission Line:</strong> Add a glowing line at the transition point.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Edge Control:</strong> Customize emission color, strength, and width.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Auto-Glare:</strong> Automatically sets up Compositor Glare nodes.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Bloom Control:</strong> Adjust threshold, mix, and size directly from the panel.</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917] mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg>
+                                        Animation & Control
+                                    </h3>
+                                    <ul class="space-y-2 text-sm text-stone-600">
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Driver System:</strong> Control transitions by moving an Empty object.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Auto-Keyframe:</strong> Generate animations instantly.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>13 Interpolations:</strong> Linear, Bezier, Bounce, Elastic, Back, etc.</span></li>
+                                        <li class="flex items-start gap-2"><span class="text-[#d4af37]">•</span> <span><strong>Batch Processing:</strong> Apply to all selected objects at once.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Comparison -->
+                <section class="space-y-6">
+                    <header class="space-y-2">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Comparison</p>
+                        <h2 class="font-display text-2xl font-bold text-[#1c1917]">Why choose AnimTex?</h2>
+                    </header>
+                    <div class="overflow-hidden rounded-card border border-stone-200 bg-white shadow-sm">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm">
+                                <thead>
+                                    <tr class="border-b border-stone-200 bg-stone-50/50">
+                                        <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-stone-500">Feature</th>
+                                        <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider text-[#d4af37] bg-[#d4af37]/5">AnimTex</th>
+                                        <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider text-stone-400">Standard Nodes</th>
+                                        <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider text-stone-400">Other Addons</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-stone-100">
+                                    <tr class="hover:bg-stone-50/50 transition-colors">
+                                        <td class="px-6 py-4 font-bold text-stone-700">Performance</td>
+                                        <td class="px-6 py-4 text-center font-bold text-[#d4af37] bg-[#d4af37]/5">Real-time</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Slow</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Varies</td>
+                                    </tr>
+                                    <tr class="hover:bg-stone-50/50 transition-colors">
+                                        <td class="px-6 py-4 font-bold text-stone-700">Looping</td>
+                                        <td class="px-6 py-4 text-center font-bold text-[#d4af37] bg-[#d4af37]/5">1-Click</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Manual Math</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Complex</td>
+                                    </tr>
+                                    <tr class="hover:bg-stone-50/50 transition-colors">
+                                        <td class="px-6 py-4 font-bold text-stone-700">Setup Time</td>
+                                        <td class="px-6 py-4 text-center font-bold text-[#d4af37] bg-[#d4af37]/5">Seconds</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Minutes</td>
+                                        <td class="px-6 py-4 text-center text-stone-500">Minutes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Updates & Pricing -->
+                <section class="relative overflow-hidden rounded-card bg-[#1c1917] p-8 text-white shadow-card sm:p-12">
+                    <div class="absolute top-0 right-0 -mt-10 -mr-10 h-64 w-64 rounded-full bg-[#d4af37]/20 blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 -mb-10 -ml-10 h-64 w-64 rounded-full bg-[#fcd34d]/10 blur-3xl"></div>
+                    
+                    <div class="relative z-10 grid gap-8 lg:grid-cols-2 lg:items-center">
+                        <div class="space-y-4">
+                            <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Pricing</p>
+                            <h2 class="font-display text-3xl font-bold">Simple, fair pricing.</h2>
+                            <p class="text-stone-300 text-lg">No subscriptions. No hidden fees. Just a great tool for your workflow.</p>
+                            <ul class="space-y-3 mt-6">
+                                <li class="flex items-center gap-3 text-sm text-stone-300">
+                                    <svg class="h-5 w-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Lifetime license ownership</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-stone-300">
+                                    <svg class="h-5 w-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Free updates for v1.x cycle</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-stone-300">
+                                    <svg class="h-5 w-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Commercial use allowed</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rounded-xl bg-white/10 p-1 backdrop-blur-md ring-1 ring-white/20">
+                            <div class="rounded-lg bg-[#1c1917]/80 p-6 text-center">
+                                <p class="text-sm font-medium text-stone-400 uppercase tracking-wider">Beta Access</p>
+                                <div class="mt-4 flex items-baseline justify-center gap-1">
+                                    <span class="text-4xl font-bold text-white">$19</span>
+                                    <span class="text-stone-500">USD</span>
+                                </div>
+                                <button class="mt-6 w-full rounded-lg bg-[#d4af37] px-4 py-3 text-sm font-bold text-[#1c1917] hover:bg-[#fcd34d] transition-colors shadow-lg shadow-[#d4af37]/25">
+                                    Get Beta Access
+                                </button>
+                                <p class="mt-4 text-xs text-stone-500">Available in SuperHive Market</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Installation Guide -->
+                <section class="space-y-8">
+                    <header class="space-y-3 text-center">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37]">Get Started</p>
+                        <h2 class="font-display text-3xl font-bold text-[#1c1917]">Installation Guide.</h2>
+                        <p class="text-stone-600 max-w-lg mx-auto">Up and running in less than a minute.</p>
+                    </header>
+
+                    <div class="grid gap-8 md:grid-cols-2">
+                        <!-- Step 1 -->
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5">
+                            <div class="mb-4 aspect-video overflow-hidden rounded-lg bg-[#1d1d1d] ring-1 ring-stone-900/10 relative">
+                                <!-- Illustration: Blender Menu -->
+                                <div class="w-full h-full p-2 font-sans text-xs text-[#e6e6e6] select-none">
+                                    <!-- Top Bar -->
+                                    <div class="flex gap-4 border-b border-[#3d3d3d] pb-1 mb-2 text-[10px]">
+                                        <div class="opacity-70 hover:text-white cursor-default">File</div>
+                                        <div class="bg-[#3d3d3d] px-1.5 rounded text-white cursor-default">Edit</div>
+                                        <div class="opacity-70 hover:text-white cursor-default">Render</div>
+                                        <div class="opacity-70 hover:text-white cursor-default">Window</div>
+                                        <div class="opacity-70 hover:text-white cursor-default">Help</div>
+                                    </div>
+                                    <!-- Dropdown -->
+                                    <div class="absolute top-8 left-10 bg-[#2b2b2b] border border-[#3d3d3d] rounded shadow-xl w-40 flex flex-col py-1 z-10 text-[10px]">
+                                        <div class="px-3 py-1 opacity-70 hover:bg-[#4772b3] hover:text-white cursor-default">Undo</div>
+                                        <div class="px-3 py-1 opacity-70 hover:bg-[#4772b3] hover:text-white cursor-default">Redo</div>
+                                        <div class="h-px bg-[#3d3d3d] my-1"></div>
+                                        <div class="px-3 py-1 opacity-70 hover:bg-[#4772b3] hover:text-white cursor-default">Menu Search...</div>
+                                        <div class="h-px bg-[#3d3d3d] my-1"></div>
+                                        <div class="px-3 py-1 bg-[#4772b3] text-white flex justify-between items-center cursor-default">
+                                            Preferences...
+                                            <span class="opacity-50 text-[9px]">Ctrl ,</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1c1917] text-sm font-bold text-white">1</div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917]">Open Preferences</h3>
+                                    <p class="mt-1 text-sm text-stone-600">In Blender, go to <span class="font-mono text-xs bg-stone-100 px-1 py-0.5 rounded">Edit</span> &gt; <span class="font-mono text-xs bg-stone-100 px-1 py-0.5 rounded">Preferences</span>.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Step 2 -->
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5">
+                            <div class="mb-4 aspect-video overflow-hidden rounded-lg bg-[#2b2b2b] ring-1 ring-stone-900/10">
+                                <!-- Illustration: Sidebar -->
+                                <div class="w-full h-full flex font-sans text-xs text-[#e6e6e6] select-none">
+                                    <!-- Sidebar -->
+                                    <div class="w-1/3 bg-[#1d1d1d] flex flex-col gap-0.5 p-2 border-r border-[#1a1a1a] text-[10px]">
+                                        <div class="px-2 py-1 rounded hover:bg-[#3d3d3d] opacity-70 cursor-default">Interface</div>
+                                        <div class="px-2 py-1 rounded hover:bg-[#3d3d3d] opacity-70 cursor-default">Viewport</div>
+                                        <div class="px-2 py-1 rounded hover:bg-[#3d3d3d] opacity-70 cursor-default">Animation</div>
+                                        <div class="px-2 py-1 rounded bg-[#4772b3] text-white font-medium shadow-sm cursor-default">Add-ons</div>
+                                        <div class="px-2 py-1 rounded hover:bg-[#3d3d3d] opacity-70 cursor-default">Input</div>
+                                        <div class="px-2 py-1 rounded hover:bg-[#3d3d3d] opacity-70 cursor-default">Navigation</div>
+                                    </div>
+                                    <!-- Content Area -->
+                                    <div class="flex-1 p-3">
+                                        <div class="flex gap-2 mb-3">
+                                            <div class="bg-[#1d1d1d] border border-[#3d3d3d] rounded px-2 py-1 flex-1 flex items-center gap-2 text-stone-500">
+                                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                                <span class="text-[9px]">Search Add-ons</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-1.5 opacity-50">
+                                            <div class="w-2.5 h-2.5 border border-[#555] rounded-sm"></div>
+                                            <span class="text-[9px]">Enabled Only</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1c1917] text-sm font-bold text-white">2</div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917]">Select Add-ons</h3>
+                                    <p class="mt-1 text-sm text-stone-600">Navigate to the <span class="font-bold">Add-ons</span> tab in the sidebar.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Step 3 -->
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5">
+                            <div class="mb-4 aspect-video overflow-hidden rounded-lg bg-[#2b2b2b] ring-1 ring-stone-900/10 relative">
+                                <!-- Illustration: Install Dropdown -->
+                                <div class="w-full h-full p-3 font-sans text-xs text-[#e6e6e6] select-none">
+                                    <!-- Header Bar -->
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex gap-2">
+                                            <div class="bg-[#1d1d1d] border border-[#3d3d3d] rounded px-2 py-1 w-24 h-6"></div>
+                                        </div>
+                                        <div class="flex gap-1">
+                                            <div class="bg-[#1d1d1d] border border-[#3d3d3d] rounded px-2 py-1 flex items-center gap-1 cursor-default">
+                                                <span class="opacity-70 text-[10px]">Install...</span>
+                                            </div>
+                                            <div class="bg-[#4772b3] border border-[#3d3d3d] rounded px-1 py-1 flex items-center justify-center w-6 h-6 cursor-default">
+                                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Dropdown Menu -->
+                                    <div class="absolute top-10 right-3 bg-[#1d1d1d] border border-[#3d3d3d] rounded shadow-xl w-40 flex flex-col py-1 z-10 text-[10px]">
+                                        <div class="px-3 py-1.5 opacity-70 hover:bg-[#3d3d3d] flex items-center gap-2 cursor-default">
+                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                                            Refresh Local
+                                        </div>
+                                        <div class="px-3 py-1.5 bg-[#4772b3] text-white flex items-center gap-2 cursor-default">
+                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                            Install from Disk...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1c1917] text-sm font-bold text-white">3</div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917]">Install from Disk</h3>
+                                    <p class="mt-1 text-sm text-stone-600">Click the dropdown arrow (top right) and select <span class="font-bold">Install from Disk...</span>. Choose the <span class="font-mono text-xs bg-stone-100 px-1 py-0.5 rounded">AnimTex_v1.0.5.zip</span> file.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Step 4 -->
+                        <article class="group rounded-card bg-white p-6 shadow-sm ring-1 ring-stone-900/5">
+                            <div class="mb-4 aspect-video overflow-hidden rounded-lg bg-[#2b2b2b] ring-1 ring-stone-900/10 flex items-center justify-center p-4">
+                                <!-- Illustration: Enabled Addon -->
+                                <div class="w-full font-sans text-xs text-[#e6e6e6] select-none">
+                                    <!-- Addon Box -->
+                                    <div class="bg-[#1d1d1d] border border-[#3d3d3d] rounded-md overflow-hidden shadow-lg">
+                                        <!-- Header -->
+                                        <div class="flex items-center gap-2 p-2 bg-[#3d3d3d]/30">
+                                            <svg class="w-3 h-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                            <div class="w-3 h-3 bg-[#4772b3] rounded-sm flex items-center justify-center">
+                                                <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                            </div>
+                                            <span class="font-bold text-[11px]">AnimTex</span>
+                                        </div>
+                                        <!-- Content -->
+                                        <div class="p-3 space-y-2 border-t border-[#3d3d3d]">
+                                            <p class="text-[10px] opacity-70 leading-tight">Create animated transitions between two textures using an Empty object.</p>
+                                            <div class="flex justify-between items-center mt-2">
+                                                <div class="space-y-0.5">
+                                                    <div class="text-[9px] opacity-50">Version: 1.0.5</div>
+                                                    <div class="text-[9px] opacity-50">Author: Doctor Legion</div>
+                                                </div>
+                                                <div class="bg-[#3d3d3d] hover:bg-[#4d4d4d] border border-[#555] rounded px-2 py-1 text-[10px] cursor-default">Remove</div>
+                                            </div>
+                                            <div class="text-[9px] opacity-30 truncate font-mono mt-1">.../addons/animtex/__init__.py</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1c1917] text-sm font-bold text-white">4</div>
+                                <div>
+                                    <h3 class="font-bold text-[#1c1917]">Enable AnimTex</h3>
+                                    <p class="mt-1 text-sm text-stone-600">Search for "AnimTex" and check the box to enable it. You're ready to go!</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="space-y-6">
+                    <header class="space-y-2 text-center">
+                        <h2 class="font-display text-2xl font-bold text-[#1c1917]">Frequently Asked Questions</h2>
+                    </header>
+                    <div class="mx-auto max-w-2xl space-y-4">
+                        <details class="group rounded-card bg-white shadow-sm ring-1 ring-stone-900/5 open:ring-[#d4af37]/20">
+                            <summary class="flex cursor-pointer items-center justify-between p-6 font-medium text-stone-900">
+                                Does AnimTex work on Mac?
+                                <span class="ml-4 flex h-6 w-6 items-center justify-center rounded-full bg-stone-100 text-stone-500 transition group-open:rotate-45">
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-sm text-stone-600 leading-relaxed">
+                                Yes! AnimTex is built on standard Blender nodes and Python, so it works perfectly on Windows, macOS (Intel & Apple Silicon), and Linux.
+                            </div>
+                        </details>
+                        <details class="group rounded-card bg-white shadow-sm ring-1 ring-stone-900/5 open:ring-[#d4af37]/20">
+                            <summary class="flex cursor-pointer items-center justify-between p-6 font-medium text-stone-900">
+                                Can I use this for commercial projects?
+                                <span class="ml-4 flex h-6 w-6 items-center justify-center rounded-full bg-stone-100 text-stone-500 transition group-open:rotate-45">
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-sm text-stone-600 leading-relaxed">
+                                Absolutely. The standard license covers commercial use.
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Giving Back -->
+                <section class="rounded-card bg-gradient-to-br from-stone-50 to-stone-100 p-8 text-center ring-1 ring-stone-200">
+                    <div class="mx-auto max-w-2xl space-y-4">
+                        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#d4af37]/20 text-[#d4af37]">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <h2 class="font-display text-2xl font-bold text-[#1c1917]">We support the community.</h2>
+                        <p class="text-stone-700">We donate directly to the Blender Foundation Development Fund.</p>
+                    </div>
+                </section>
+
+                <footer class="border-t border-stone-200 pt-8 text-center text-sm text-stone-500">
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
